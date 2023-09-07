@@ -1,27 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Tags from './Tags';
-import { Card as BootstrapCard } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
-const Card = ({ image, name, description }) => {
+function CardComponent(props) {
+  const buttonColors = ['success', 'primary', 'danger', 'warning'];
+  const colorIndex = props.index % buttonColors.length;
+
   return (
-    <BootstrapCard className="card">
-      <BootstrapCard.Img variant="top" src={image} alt={name} />
-      <BootstrapCard.Body>
-        <BootstrapCard.Title>{name}</BootstrapCard.Title>
-        <BootstrapCard.Text>{description}</BootstrapCard.Text>
-        <div className="tags-container">
-          <Tags text="Amigable" color="success" />
-        </div>
-      </BootstrapCard.Body>
-    </BootstrapCard>
-  );
-};
+    <div style={{ margin: '10px', display: 'flex', justifyContent: 'center' }}>
+    <Card style={{ width: '18rem', alignItems: 'center' }}>
+      <Card.Img variant="top" src={props.imageSrc} alt={props.name} />
+      <Card.Body>
+        <Card.Title>{props.name}</Card.Title>
+        <Card.Text>{props.description}</Card.Text>
+        {}
+      </Card.Body>
 
-Card.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-};
+      <Button
+        variant={buttonColors[colorIndex]}
+        className="custom-width-button"
+        style={{ marginBottom: '10px' }}
+      >
+        {props.buttonText} {}
+      </Button>{' '}
+    </Card>
+  </div>
+);
+}
 
-export default Card;
+export default CardComponent;

@@ -1,14 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Badge from 'react-bootstrap/Badge';
 
-const Tags = ({ text, color }) => {
-  return <Badge bg={color}>{text}</Badge>;
-};
-
-Tags.propTypes = {
-  text: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-};
+function Tags(props) {
+  return (
+    <div>
+      <Badge bg={props.backgroundColor}>{props.text}</Badge>
+    </div>
+  );
+}
 
 export default Tags;
