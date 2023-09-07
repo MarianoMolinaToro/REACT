@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-# React + Vite
+Proyecto de Adopción de Perros
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web simple que muestra información sobre perros disponibles para adopción. Los usuarios pueden ver imágenes de los perros, leer sus descripciones y obtener información sobre su personalidad.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
-# REACT
-React vite
->>>>>>> dc690619b48c04c7d496aa49c36bf4de64ab148c
+- React.js
+- Bootstrap
